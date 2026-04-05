@@ -113,43 +113,48 @@ while True:
         screen.blit(level_text, (10, 50))
         pygame.display.flip()
 
-# TODO 3: Write the Game Over screen
-# Display "Game Over" and final score
-# Allow R to restart, Q to quit
-game_over_screen = True
+    # TODO 3: Write the Game Over screen
+    # Display "Game Over" and final score
+    # Allow R to restart, Q to quit
+    game_over_screen = True
 
-while game_over_screen:
-    clock.tick(60)
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            game_over_screen = False
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_r:
-                game_state = {
-                    "score": 0,
-                    "lives": 3,
-                    "level": 1,
-                    "game_over": False,
-                    "fall_speed": 3
-                }
-                basket_x = SCREEN_WIDTH // 2 - basket_width // 2
-                falling_objects = []
-                frame_count = 0
+    while game_over_screen:
+        clock.tick(60)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
                 game_over_screen = False
-                break
-            if event.key == pygame.K_q:
-                game_over_screen = False
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_r:
+                    game_state = {
+                        "score": 0,
+                        "lives": 3,
+                        "level": 1,
+                        "game_over": False,
+                        "fall_speed": 3
+                    }
+                    basket_x = SCREEN_WIDTH // 2 - basket_width // 2
+                    falling_objects = []
+                    frame_count = 0
+                    game_over_screen = False
+                    break
+                if event.key == pygame.K_q:
+                    game_over_screen = False
 
-    screen.fill(WHITE)
-    game_over_font = pygame.font.SysFont("Arial", 60)
-    game_over_text = game_over_font.render("Game Over", True, RED)
-    screen.blit(game_over_text, (SCREEN_WIDTH // 2 - 250, 150))
+        screen.fill(WHITE)
+        game_over_font = pygame.font.SysFont("Arial", 60)
+        game_over_text = game_over_font.render("Game Over", True, RED)
+        screen.blit(game_over_text, (SCREEN_WIDTH // 2 - 250, 150))
 
-    final_score_text = font.render(f"Final Score: {game_state['score']}", True, BLACK)
-    screen.blit(final_score_text, (SCREEN_WIDTH // 2 - 200, 280))
+        final_score_text = font.render(f"Final Score: {game_state['score']}", True, BLACK)
+        screen.blit(final_score_text, (SCREEN_WIDTH // 2 - 200, 280))
 
-    restart_text = font.render("Press R to restart or Q to quit", True, BLACK)
-    screen.blit(restart_text, (SCREEN_WIDTH // 2 - 200, 380))
+        restart_text = font.render("Press R to restart or Q to quit", True, BLACK)
+        screen.blit(restart_text, (SCREEN_WIDTH // 2 - 200, 380))
 
-    pygame.display.flip()
+        pygame.display.flip()
+    if not game_over_screen:
+        if game_state["game_over"]:
+            continue
+        else:
+            break
 pygame.quit()
