@@ -57,60 +57,61 @@ def create_obj():
 frame_count = 0
 spawn_rate = 30
 
-while not game_state["game_over"]:
-    clock.tick(60)
-    frame_count += 1
+while True:
+    while not game_state["game_over"]:
+        clock.tick(60)
+        frame_count += 1
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_state["game_over"] = True
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    basket_x -= basket_speed
+                if event.key == pygame.K_RIGHT:
+                    basket_x += basket_speed
+        if basket_x < 0:
+            basket_x = 0
+        if basket_x + basket_width > SCREEN_WIDTH:
+            basket_x = SCREEN_WIDTH - basket_width
+
+        if frame_count % spawn_rate == 0:
+            falling_objects.append(create_obj())
+
+        for obj in falling_objects:
+            obj["y"] += game_state["fall_speed"]
+
+        objects_keep = []
+        for obj in falling_objects:
+            if obj["y"] + obj["size"] >= basket_y and basket_x <= obj["x"] <= basket_x + basket_width:
+                game_state["score"] += 1
+            elif obj["y"] > SCREEN_HEIGHT:
+                game_state["lives"] -= 1
+            else:
+                objects_keep.append(obj)
+        falling_objects = objects_keep
+
+        if game_state["score"] > 0 and game_state["score"] % 5 == 0:
+            game_state["fall_speed"] += 1
+            game_state["level"] = game_state["score"] // 5
+            game_state["fall_speed"] = 3 + game_state["level"]
+
+        if game_state["lives"] <= 0:
             game_state["game_over"] = True
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                basket_x -= basket_speed
-            if event.key == pygame.K_RIGHT:
-                basket_x += basket_speed
-    if basket_x < 0:
-        basket_x = 0
-    if basket_x + basket_width > SCREEN_WIDTH:
-        basket_x = SCREEN_WIDTH - basket_width
 
-    if frame_count % spawn_rate == 0:
-        falling_objects.append(create_obj())
+        screen.fill(WHITE)
+        pygame.draw.rect(screen, BLACK, (basket_x, basket_y, basket_width, basket_height))
 
-    for obj in falling_objects:
-        obj["y"] += game_state["fall_speed"]
+        for obj in falling_objects:
+            pygame.draw.circle(screen, obj["color"], (obj["x"], obj["y"]), obj["size"])
+        score_text = font.render(f"Score: {game_state['score']}", True, BLACK)
+        lives_text = font.render(f"Lives: {game_state['lives']}", True, BLACK)
+        level_text = font.render(f"Level: {game_state['level']}", True, BLACK)
 
-    objects_keep = []
-    for obj in falling_objects:
-        if obj["y"] + obj["size"] >= basket_y and basket_x <= obj["x"] <= basket_x + basket_width:
-            game_state["score"] += 1
-        elif obj["y"] > SCREEN_HEIGHT:
-            game_state["lives"] -= 1
-        else:
-            objects_keep.append(obj)
-    falling_objects = objects_keep
-
-    if game_state["score"] > 0 and game_state["score"] % 5 == 0:
-        game_state["fall_speed"] += 1
-        game_state["level"] = game_state["score"] // 5
-        game_state["fall_speed"] = 3 + game_state["level"]
-
-    if game_state["lives"] <= 0:
-        game_state["game_over"] = True
-
-    screen.fill(WHITE)
-    pygame.draw.rect(screen, BLACK, (basket_x, basket_y, basket_width, basket_height))
-
-    for obj in falling_objects:
-        pygame.draw.circle(screen, obj["color"], (obj["x"], obj["y"]), obj["size"])
-    score_text = font.render(f"Score: {game_state['score']}", True, BLACK)
-    lives_text = font.render(f"Lives: {game_state['lives']}", True, BLACK)
-    level_text = font.render(f"Level: {game_state['level']}", True, BLACK)
-
-    screen.blit(score_text, (10, 10))
-    screen.blit(lives_text, (10, 30))
-    screen.blit(level_text, (10, 50))
-    pygame.display.flip()
+        screen.blit(score_text, (10, 10))
+        screen.blit(lives_text, (10, 30))
+        screen.blit(level_text, (10, 50))
+        pygame.display.flip()
 
 # TODO 3: Write the Game Over screen
 # Display "Game Over" and final score
@@ -118,6 +119,7 @@ while not game_state["game_over"]:
 game_over_screen = True
 
 while game_over_screen:
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game_over_screen = False
