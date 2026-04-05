@@ -54,7 +54,6 @@ def create_obj():
 # g) Increase difficulty every 5 points
 # h) Draw everything on the screen
 # i) Display score and lives
-
 frame_count = 0
 spawn_rate = 30
 
@@ -139,17 +138,16 @@ while game_over_screen:
             if event.key == pygame.K_q:
                 game_over_screen = False
 
-screen.fill(WHITE)
+    screen.fill(WHITE)
+    game_over_font = pygame.font.SysFont("Arial", 60)
+    game_over_text = game_over_font.render("Game Over", True, RED)
+    screen.blit(game_over_text, (SCREEN_WIDTH // 2 - 250, 150))
 
-game_over_font = pygame.font.SysFont("Arial", 60)
-game_over_text = game_over_font.render("Game Over", True, RED)
-screen.blit(game_over_text, (SCREEN_WIDTH // 2 - 250, 150))
+    final_score_text = font.render(f"Final Score: {game_state['score']}", True, BLACK)
+    screen.blit(final_score_text, (SCREEN_WIDTH // 2 - 200, 280))
 
-final_score_text = font.render(f"Final Score: {game_state['score']}", True, BLACK)
-screen.blit(final_score_text, (SCREEN_WIDTH // 2 - 200, 280))
+    restart_text = font.render("Press R to restart or Q to quit", True, BLACK)
+    screen.blit(restart_text, (SCREEN_WIDTH // 2 - 200, 380))
 
-restart_text = font.render("Press R to restart or Q to quit", True, BLACK)
-screen.blit(restart_text, (SCREEN_WIDTH // 2 - 200, 380))
-
-pygame.display.flip()
+    pygame.display.flip()
 pygame.quit()
