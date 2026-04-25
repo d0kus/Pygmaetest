@@ -21,7 +21,7 @@ font = pygame.font.SysFont("Arial", 28)
 
 def create_obj():
     obj = {
-        "x": random.randint(0, SCREEN_WIDTH - 30),
+        "x": random.randint(10, SCREEN_WIDTH - 30),
         "y": 0,
         "color": random.choice(COLORS),
         "size": 20
@@ -34,9 +34,7 @@ basket_height = 20
 basket_y = SCREEN_HEIGHT - 50
 basket_speed = 50
 
-# ОСНОВНОЙ ЦИКЛ
 while True:
-    # Сброс для новой игры
     game_state = {
         "score": 0,
         "lives": 3,
@@ -105,7 +103,6 @@ while True:
         screen.blit(level_text, (10, 70))
         pygame.display.flip()
 
-    # GAME OVER ЭКРАН (ПОСЛЕ ИГРЫ)
     game_over_screen = True
     restart_game = False
 

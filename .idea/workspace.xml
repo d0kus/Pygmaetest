@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16c4c26-e5e3-4f81-a9ff-cde441874ddf" name="Changes" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/ADS/ads3assignment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP/6week/blas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP/6week/lll1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP/6week/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP/6week/task2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP/Assignments/assignment2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pygame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITP/Assignments/Pygame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +24,9 @@
       <entry key="_C:/Users/noer8/PycharmProjects/Pygmaetest" value="3BprvzioI9ghZP1YRqmhEzOms6I" />
     </persistenceIdMap>
   </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -28,18 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "d0kus"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;d0kus&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/d0kus/Pygmaetest.git",
-    "accountId": "81ed94d9-eb93-426d-9fe3-4d6f7bf4f223"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/d0kus/Pygmaetest.git&quot;,
+    &quot;accountId&quot;: &quot;81ed94d9-eb93-426d-9fe3-4d6f7bf4f223&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -57,6 +66,12 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Pygame.executor": "Run",
+    "Python.ads3assignment.executor": "Run",
+    "Python.assignment2.executor": "Run",
+    "Python.blas.executor": "Run",
+    "Python.lll1.executor": "Run",
+    "Python.task1.executor": "Run",
+    "Python.task2.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -71,11 +86,21 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.mcp.McpConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\noer8\PycharmProjects\Pygmaetest\ITP\6week" />
+      <recent name="C:\Users\noer8\PycharmProjects\Pygmaetest\ITP\Assignments" />
+      <recent name="C:\Users\noer8\PycharmProjects\Pygmaetest\ITP\24apr" />
+      <recent name="C:\Users\noer8\PycharmProjects\Pygmaetest\ADS" />
+      <recent name="C:\Users\noer8\PycharmProjects\Pygmaetest\ITP" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -92,7 +117,18 @@
       <option name="presentableId" value="Default" />
       <updated>1775197087096</updated>
       <workItem from="1775197088141" duration="273000" />
-      <workItem from="1775372210498" duration="4636000" />
+      <workItem from="1775372210498" duration="4649000" />
+      <workItem from="1775377170350" duration="51000" />
+      <workItem from="1775531986883" duration="2309000" />
+      <workItem from="1775534674896" duration="583000" />
+      <workItem from="1775641768823" duration="132000" />
+      <workItem from="1776007255267" duration="2717000" />
+      <workItem from="1776075876234" duration="3440000" />
+      <workItem from="1776138527206" duration="1528000" />
+      <workItem from="1776744791620" duration="1429000" />
+      <workItem from="1776827239291" duration="1096000" />
+      <workItem from="1777000808098" duration="1806000" />
+      <workItem from="1777007684364" duration="5719000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -142,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775376130855</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1775376886571</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1775376886571</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +197,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="init commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Pygmaetest$Pygame.coverage" NAME="Pygame Coverage Results" MODIFIED="1775376862010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$assignment2.coverage" NAME="assignment2 Coverage Results" MODIFIED="1776140023732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$blas.coverage" NAME="blas Coverage Results" MODIFIED="1777001323319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$task1.coverage" NAME="task1 Coverage Results" MODIFIED="1777001642965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITP" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$Pygame.coverage" NAME="Pygame Coverage Results" MODIFIED="1775641781791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$ads3assignment.coverage" NAME="ads3assignment Coverage Results" MODIFIED="1777011767520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ADS" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$task2.coverage" NAME="task2 Coverage Results" MODIFIED="1777002273709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITP/24apr" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$lll1.coverage" NAME="lll1 Coverage Results" MODIFIED="1776745605666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
