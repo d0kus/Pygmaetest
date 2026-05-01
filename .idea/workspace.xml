@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16c4c26-e5e3-4f81-a9ff-cde441874ddf" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/ADS/ads3assignment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITP/6week/blas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITP/6week/lll1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITP/6week/task1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITP/6week/task2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITP/Assignments/assignment2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITP/7week/a1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITP/Assignments/Pygame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +60,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Pygame.executor": "Run",
+    "Python.a1.executor": "Run",
     "Python.ads3assignment.executor": "Run",
     "Python.assignment2.executor": "Run",
     "Python.blas.executor": "Run",
@@ -129,6 +124,10 @@
       <workItem from="1776827239291" duration="1096000" />
       <workItem from="1777000808098" duration="1806000" />
       <workItem from="1777007684364" duration="5719000" />
+      <workItem from="1777098927075" duration="33000" />
+      <workItem from="1777221537152" duration="609000" />
+      <workItem from="1777257499848" duration="5371000" />
+      <workItem from="1777348089152" duration="3738000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -186,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775376886571</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1777098955647</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777098955647</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +206,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Pygmaetest$assignment2.coverage" NAME="assignment2 Coverage Results" MODIFIED="1776140023732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pygmaetest$blas.coverage" NAME="blas Coverage Results" MODIFIED="1777001323319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pygmaetest$a1.coverage" NAME="a1 Coverage Results" MODIFIED="1777351825835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITP/7week" />
     <SUITE FILE_PATH="coverage/Pygmaetest$task1.coverage" NAME="task1 Coverage Results" MODIFIED="1777001642965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITP" />
     <SUITE FILE_PATH="coverage/Pygmaetest$Pygame.coverage" NAME="Pygame Coverage Results" MODIFIED="1775641781791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Pygmaetest$ads3assignment.coverage" NAME="ads3assignment Coverage Results" MODIFIED="1777011767520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ADS" />
